@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var program     = require('commander')
+  , pkg         = require(__dirname + '/../package.json')
+  , LogStamper  = require(__dirname + '/../lib/logstamper')
+;
+
+program.
+  version(pkg.version).
+  option('-e, --stderr', 'Treat input as stderr').
+  option('-c, --command [cmd]', 'Command that was run').
+  parse(process.argv)
+;
+
+var stamper = new LogStamper({ command: program.command, stderr: program.stderr, input: process.stdin });
+
+stamper.print();
