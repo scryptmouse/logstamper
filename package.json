@@ -1,7 +1,7 @@
 {
   "name": "logstamper",
   "description": "Prefix lines of input with timestamps, etc.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/scryptmouse/logstamper",
   "author": {
     "name": "Alexa Grey",
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/scryptmouse/logstamper.git"
+  },
+  "bin": {
+    "logstamper": "bin/logstamper"
   },
   "bugs": {
     "url": "https://github.com/scryptmouse/logstamper/issues"
